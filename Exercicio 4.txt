@@ -1,0 +1,15 @@
+import os
+
+# Limpar o terminal.
+os.system ("cls")
+
+print : (" - Solicitando dados -")
+primeiro_numero = int(input("Digite o primeiro número:"))
+segundo_numero = int(input("Digite o segundo número:"))
+
+#Calculando.
+ 
+
+
+
+

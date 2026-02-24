@@ -1,0 +1,9 @@
+import os 
+
+# Limpa o terminal.
+os.system("cls")
+
+numero = int(input("Digite um número:"))
+
+if numero == 10:
+    print

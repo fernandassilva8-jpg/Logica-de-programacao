@@ -1,0 +1,23 @@
+import os
+
+# Limpar o terminal.
+os.system("cls") 
+
+primeira_nota = float(input("Digite sua primeira nota"))
+segunda_nota = float(input("Digite sua segunda nota"))
+terceira_nota=float(input("Digite sua terceira nota"))
+
+# Calcule.
+media = (primeira_nota + segunda_nota + terceira_nota) / 3
+
+# Condicional
+if media: >= 7:
+    resultado = "Aprovado"
+else:
+    resultado = "Reprovado"
+    
+# Mostre o nome e a média.
+print("\n- Exibindo dados -")
+print(f"Média: {media} do aluno.")
+print(f"Resultado:{resultado}.")
+
