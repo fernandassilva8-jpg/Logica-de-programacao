@@ -1,23 +1,14 @@
 import os
 
-os.system ("cls")
-# LIMPAR TERMINAL .
+os.system("cls||clear")
 
-dia = input("Digite dia da semana")
+def somar(n1, n2):
+    soma = n1 + n2
+    print(f"Soma = {soma}")
 
-math dia:
-    case:"segunda"
-        print("Hoje é segunda-feira.")
 
-    case "terça"
-        print("Hoje é terça-feira.")
+primeiro_numero  = int(input("Digite o primeiro número: "))
+segundo_numero  = int(input("digite o segundo número: "))
 
-    case:"quarta"
-        print("Hoje é quarta-feira.")
 
-    case: "quinta"
-        print("Hoje é quinta-feira.")
-
-    case: "sexta"
-        print("Hoje é sexta-feira.")
-
+somar(primeiro_numero, segundo_numero)
