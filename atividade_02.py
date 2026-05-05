@@ -1,24 +1,29 @@
-import os 
-os.system("cls")
+import os
+from dataclasses import dataclass
 
+os.system ('cls')
 
-# login_correto = "Fernanda"
-# senha_correto = "TudoNosso123"
+@dataclass
+class Empresa:
+    nome:str
+    cnpj: str
+    telefone: str
 
-# while tentativas < 3:
-#     login = input("Digite seu login")
-#     senha = input("Digite sua senha: ")
+    def mostrar_dados(self):
+        print(f'Nome:{self.nome}')
+        print(f'Cnpj:{self.cnpj}')
+        print(f'Telefone: {self.telefone}')
+    
+lista_empresas = []
 
-#     login_esta_correto = login == login_correto
-#     senha_esta_correta = senha == senha_correto
+with open('lista_empresas.csv', 'r') as arquivo:
+    for linha in arquivo:
+        nome, cnpj, telefone = linha.strip().split(',')
+        lista_empresas.append(Empresa(
+            nome=nome,
+            cnpj=cnpj,
+            telefone=telefone
+    ))
 
-#     if login_esta_correto and senha_esta_correta:
-#         print("Login bem-sucedido!")
-#         break #Interrompe o laço de repetição
-#     if chances_restantes > 0:
-#         print("Login ou senha incorretos. Tente novamente.")
-#         print(f"Você tem mais {chances_restantes} tentativas, boa sorte")
-#     else:
-#         print("acabou, acesso bloqueado!")
-#         break
-
+for empresa in lista_empresas:
+    empresa.mostrar_dados()
